@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <body>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+        <script type="text/javascript">
+        let x = 20;
+let y = 100;
+let speedX = 5;
+let speedY = 5;
+let blockX = [];
+
+
+function setup () {
+    createCanvas(400, 400);
+
+    blockX[0] = 1;
+    blockX[1] = 60;
+    blockX[2] = 119;
+    blockX[3] = 178;
+    blockX[4] = 237;
+    blockX[5] = 296;
+    blockX[6] = 355;
+}
+function draw() {
+    background(150);
+    line(mouseX- 30, height - 50, mouseX+ 30, height - 50);
+    x = x + speedX;
+    y = y + speedY;
+    ball(x, y);
+    
+    //counting the blocks
+    let brokenblocks=0;
+    for (let i = 0; i < blockX.length; i++) {
+        rect(blockX[i], 10, 40, 40);
+        if ( (x > blockX[i]   &&
+            x <blockX[i]+ 40 &&
+            y<= 50)) {
+
+        speedY = -speedY;
+        blockX[i] = -1000;
+        }
+        if (blockX[i]=== - 1000) {
+           brokenblocks++;
+        }
+    }
+    stroke(0, 0, 0);
+    if (brokenblocks===7){
+        background(150);
+        text("You Won!", width / 2, height / 2);
+        noLoop();   
+    }
+    // bouncing off the sides
+    if (x < 20 || x > width - 20) {
+        speedX = -speedX;
+    }
+    //bouncing off the paddle 
+    if ( (x > mouseX - 50 &&
+            x < mouseX + 50 &&
+            y === height - 70)) {
+        speedY= -speedY;
+    } 
+    // bouncing off the top 
+    if (y<0) {
+          speedY = -speedY;
+    }
+ if (y< height -26){
+ } else {
+      textAlign(CENTER);
+      textFont("Open Sans");
+      textStyle(BOLD);
+      text("GAME OVER", width / 2, height / 2);
+      noLoop();
+    }
+    
+    
+}
+function ball(x, y) {
+    fill(100, 255, 13);
+    noStroke(36);
+    strokeWeight(3);
+    ellipse(x, y, 40, 40);
+}
+
+</script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title></title>
+        <link href="stylesheet.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    </head>
+    <body>
+        <div id="page">
+             <div id= "content">
+    
+        <h1> Jennifer's Capstone webs </h1>
+      
+    
+      <table class="nav">
+
+          <tr>
+
+            <td><a href="index.html">Home</a></td>
+             <td><a href="strengths.html">strengths</a></td>
+
+            <td><a href="ap-create.html">ap Create</a></td>
+
+            <td><a href="ap-explore.html">ap exlpore</a></td>
+
+            <td><a href="college.html">college</a></td>
+            
+            <td><a href="research-paper.html">research paper</a></td>
+
+
+          </tr>
+        </table>
+        <p> 2a)
+	My game was written in JavaScripts using Popcode development environment. The purpose of my game is to make all the blocks disappear when the ball hits the blocks. If the ball goes under the paddle then you lose and if you make all the 7 blocks disappear then you win the game. In this video clip, you can see that the ball is moving around and  the paddle moving as well.You are able to control the paddle and as soon as the ball touches one of the blocks, the blocks vanishes
+
+        </p>
+        <p>
+            2b) My partner and I used iterative pair programming .My partner and I worked together to create the blocks and the ball. I wrote the code for the ball to bounce move around independently and i also created the paddle and made the blocks disappear whenever the ball touches the blocks.The first developmental challenge I had was that the paddle was not appearing. This is a problem because in this game we need a paddle so that the ball can bounce off and hit the blocks. I noticed that the paddle was the same color as the background color which made it not appear. I solved this problem  by changing the paddle to the color black so that the paddle can appear.The second challenge i had was that the ball was only moving in one direction. The ball was bouncing  straight up and down vertically from the y-axis only . This is a problem because the point of the game is for the ball to bounce around diagonally to hit all the blocks. I solved this challenge by adding the statement  x + speedX and the statement y + speedY. This causes the ball to bounce around the x- axis and from the y-axis. 
+
+        </p>
+        <p> 2c)
+   My main Algorithm that I am using is the draw() function. Inside the draw () function the blocks are created it also has the code that makes the ball bounce off the sides, the ball bouncing off the top and the ball bouncing off the paddle. The draw() function incorporates with the math algorithm shown below. 
+
+ x = x + speedX;
+ y = y + speedY;
+ 
+ The purpose of this code is so that the ball can move around. When this Math algorithm runs correctly the ball moves around on the x and y axis. The algorithm is able to achieve this results because it's adding x with speedX and y with speedY which allows the ball to move around not only in one direction. If this program did not include this algorithm, then the ball would only move in one direction.
+ 
+ The draw() function also incorporates  the logic algorithm shown below;
+ 
+if ( (x > mouseX - 50 &&
+            x < mouseX + 50 &&
+            y === height - 70)) {
+        speedY= -speedY;
+   }
+ 
+ 
+ 
+The purpose of this code is so that the ball can bounce off from the paddle. When this logic algorithm runs correctly it allows the paddle to hit the ball so that the ball can bounce and hit the blocks . The algorithm is saying if the x of the ball is near the mouse and if the y of the ball is near the bottom. If this is true the ball switch directions which allows the ball to bounce off the paddle If this program did not include this algorithm then ball would pass through the paddle and the paddle wouldn’t be able to touch the ball and that would not allow the player to hit the blocks and win. 
+</p>
+<p> 2d
+function setup() {
+    createCanvas(400, 400);
+
+    blockX[0] = 1;
+    blockX[1] = 60;
+    blockX[2] = 119;
+    blockX[3] = 178;
+    blockX[4] = 237;
+    blockX[5] = 296;
+    blockX[6] = 355;
+}
+
+An example of an abstraction in my program is the blockX array. This is an array  abstraction because it achieves the purpose of drawing all the blocks while hiding all the steps to complete the task. This simplifies my program by just putting the x axis of the blocks instead of having to write rect() multiple times. If this abstraction weren’t present, then it would take multiple steps to build all 7 blocks and also it would also take longer  to create the blocks . 
+</p>
+        <iframe src="create/index.html" width="60%" height="500"/>
+     
+    </body>
+    </html>

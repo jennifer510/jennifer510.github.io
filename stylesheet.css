@@ -1,0 +1,52 @@
+.nav-item {
+  margin:10px;
+  pading:5px;
+ text-decoration: none;
+  
+}
+body {
+  background-color:#8563c5;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.home{
+  
+}
+#riverside{
+  width:400px;
+}
+#campus{
+  width:300px;
+}
+#state{
+  width:200px;
+}
+#hu{
+  width:200px;
+}
+#page{
+text-align:center;
+}
+
+#content {
+
+  background-color: #EAF7F3;
+
+  border: 1px solid blue;
+
+  margin: 0 auto;
+
+  width: 720px;
+
+}
+
+.nav {
+    border:solid black 3px;
+    margin:0 auto;
+    padding:0;
+}
+#artifact{
+  width:400px;
+}
